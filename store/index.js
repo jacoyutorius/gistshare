@@ -61,7 +61,15 @@ const createStore = () => {
       }),
       callAuth(){
         firebase.auth().signInWithRedirect(provider)
-      }
+      },
+      async signOut({commit}){
+        await firebase.auth().signOut()
+        commit("setCredential", { user: null })
+      },
+      callGithubAuth(){
+        var githubProvider = new firebase.auth.GithubAuthProvider()
+        firebase.auth().signInWithRedirect(provider)
+      },
     }
   })
 }

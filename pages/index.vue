@@ -1,6 +1,7 @@
 <template>
   <section class="section is-fullwidth">
     <div v-if="user" class="card">
+
       <div class="card-content">
         <div class="media">
           <div class="media-left">
@@ -11,6 +12,14 @@
           <div class="media-content">
             <p class="title is-4">{{ user.displayName }}</p>
             <p class="subtitle is-6">{{ user.email }}</p>
+          </div>
+          <div class="media-right">
+            <a class="button is-small" @click="onSignout">
+              <span class="icon">
+                <i class="fa fa-user"></i>
+              </span>
+                SignOut
+            </a>
           </div>
         </div>
 
@@ -41,8 +50,11 @@
         
       </div>
     </div>
-    <div class="media" v-else>
-      <button class="button is-primary" @click="callAuth">Sign in with Google</button>
+    <div class="media signin" v-else>
+      <div>
+        <button class="button" @click="callAuth"><i class="fa fa-google"></i>  Sign in with Google</button>
+        <button class="button" @click="callGithubAuth"><i class="fa fa-github"></i>  Sign in with Github</button>
+      </div>
     </div>
 
     <!-- card -->
@@ -103,7 +115,12 @@ export default {
       this.url = ""
       this.comment = ""
     },
-    ...mapActions(["callAuth"])
+    onSignout(){
+      if (window.confirm("Sign out?")){
+        this.signOut()
+      }
+    },
+    ...mapActions(["callAuth", "callGithubAuth", "signOut"])
   }
 }
 </script>
@@ -111,5 +128,10 @@ export default {
 <style>
 .card {
   margin: 20px;
+}
+.media.signin {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>
