@@ -38,4 +38,8 @@ section.head {
 .hero-head {
   margin-top: 100px;
 }
+.media-content {
+  /* .media内のユーザー名の表示部分でスクロールできてしまうのを防ぐ */
+  overflow: hidden;
+}
 </style>
