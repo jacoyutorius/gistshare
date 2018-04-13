@@ -57,7 +57,6 @@ const createStore = () => {
       DELETE_GIST: firebaseAction((ctx, { key }) => {
         var updates = {};
         updates['/gists/' + key] = null;
-        console.table(updates)
         firebase.database().ref().update(updates);
       }),
       callAuth(){
