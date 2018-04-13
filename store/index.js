@@ -50,8 +50,15 @@ const createStore = () => {
           name: name,
           icon: icon,
           comment: comment,
-          url: url
+          url: url,
+          createdAt: (new Date()).toString()
         })
+      }),
+      DELETE_GIST: firebaseAction((ctx, { key }) => {
+        var updates = {};
+        updates['/gists/' + key] = null;
+        console.table(updates)
+        firebase.database().ref().update(updates);
       }),
       callAuth(){
         firebase.auth().signInWithRedirect(provider)

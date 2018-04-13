@@ -19,7 +19,7 @@
             <label class="label">Gist embeded URL</label>
           </div>
           <div class="field-body">
-            <input class="input is-medium" type="text" placeholder="<script src='https://gist.github.com/jacoyutorius/d247836e6e17a241bb7e3abda748f17f.js'></script>" v-model="url">
+            <input class="input is-medium is-primary" type="text" placeholder="<script src='https://gist.github.com/jacoyutorius/d247836e6e17a241bb7e3abda748f17f.js'></script>" v-model="url">
           </div>
         </div>
         <div class="field is-horizontal">
@@ -27,7 +27,7 @@
             <label class="label">Comment</label>
           </div>
           <div class="field-body">
-            <input class="input is-medium" type="text" placeholder="comment" v-model="comment">
+            <input class="input is-medium is-primary" type="text" placeholder="comment" v-model="comment">
           </div>
         </div>
 
