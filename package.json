@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "8.9.4",
-    "yarn": "1.0.0"
+    "yarn": "0.21.3"
   },
   "description": "Nuxt.js project",
   "author": "yutoogi <yuto.ogi@fourier.jp>",
