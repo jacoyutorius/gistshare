@@ -14,13 +14,13 @@
       </div>
       <div class="content">
         <p>{{ gist.comment }}</p>
-      </div>
-      <iframe width="100%" :height="iframeHeightParam" v-bind:src="gist.url.replace('.js', '.pibb')" frameborder="0"></iframe>
+      </div> 
     </div>
+    
+    <iframe width="100%" :height="iframeHeightParam" v-bind:src="gist.url.replace('.js', '.pibb')" frameborder="0"></iframe>
+  
     <footer class="card-footer">
       <a v-on:click="onExpand" class="card-footer-item">{{ expandStateLabel }}</a>
-      <a href="#" class="card-footer-item">Edit</a>
-      <a href="#" class="card-footer-item">Delete</a>
     </footer>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     iframeHeightParam(){
-      return this.expanded ? "600px" : "300px"
+      return this.expanded ? "700px" : "300px"
     },
     expandStateLabel(){
       return this.expanded ? "Collapse" : "Expand"
