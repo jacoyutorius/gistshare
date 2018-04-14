@@ -42,4 +42,7 @@ section.head {
   /* .media内のユーザー名の表示部分でスクロールできてしまうのを防ぐ */
   overflow: hidden;
 }
+i.fa {
+  padding: 0 5px;
+}
 </style>
