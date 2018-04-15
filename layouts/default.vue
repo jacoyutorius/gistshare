@@ -12,8 +12,17 @@
         </div>
       </div>
     </section>
-    
     <nuxt/>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Gistshare</strong> by <a href="https://twitter.com/jacoyutorius">@jacoyutorius</a>.
+            source code <a href="https://github.com/jacoyutorius/gistshare">https://github.com/jacoyutorius/gistshare</a>
+          </p>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -44,5 +53,8 @@ section.head {
 }
 i.fa {
   padding: 0 5px;
+}
+.footer {
+  padding: 1rem 0.5rem 1rem;
 }
 </style>
